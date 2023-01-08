@@ -1,0 +1,77 @@
+
+
+body
+{
+    background-color: crimson;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+
+main
+{
+    height: 99vmin;
+    width:99vmin;
+    display:grid;
+    grid-template-areas:
+        "header header header"
+        "left main right"
+        "footer footer footer";
+
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+
+
+}
+
+.contenido
+{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    position: relative;}
+.contenido img
+{
+    max-inline-size: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+.piece
+{
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+}
+.inactive
+{
+    position: absolute;
+    opacity: 0;
+}
+
+.slideButton
+{
+    display: flex;
+    grid-area: header;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes fadeOut
+{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+@keyframes translateX {
+    from{}
+    to{transform:translateX(300px)}
+}
+@keyframes translate-X {
+    from{}
+    to{transform:translateX(-300px)}
+}
+
+@keyframes translateY {
+    from{}
+    to{transform:translateY(300px)}
+}
+
